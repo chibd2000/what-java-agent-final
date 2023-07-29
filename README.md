@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-# what-java-agent-final
-该工程用于在一些只有jre的环境下直接打包tools.jar包来利用的情况
-=======
 
 # what-java-agent-final
 
-该工程用于在一些只有jre的环境下直接打包tools.jar包来进行java-agent内存马的注入
+该工程用于能够落地进行java-agent内存马注入，但是在一些只有jre的环境下必须通过打包tools.jar包来进行java-agent内存马的注入。
 
 环境的tools.jar打包自行切换
 
 ![img.png](img.png)
 
+# manifest
 MANIFEST.MF
 
 ```
@@ -20,4 +17,14 @@ Agent-Class: com.zpchcbd.mem.Agent
 Can-Redefine-Classes: true
 Can-Retransform-Classes: true
 ```
->>>>>>> 7a3eaa1e3fdd0b09bc22034e9d77954511feec53
+
+# 用法
+
+## list jvm
+
+`java -jar what-java-agent-final.jar print");`
+
+## 注入filter内存马到指定的pid的jvm
+
+`java -jar what-java-agent-final.jar inject 8`
+
