@@ -22,7 +22,7 @@ Can-Retransform-Classes: true
 
 ## list jvm
 
-`java -jar what-java-agent-final.jar print");`
+`java -jar what-java-agent-final.jar print`
 
 ## 注入filter内存马到指定的pid的jvm
 
